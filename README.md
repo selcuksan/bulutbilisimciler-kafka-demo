@@ -1,4 +1,4 @@
-docker exec -it <containerid> bash
+docker exec -it "containerid" bash
 
 kafka-topics --create --topic topic-1 --bootstrap-server localhost:9092
 
