@@ -4,17 +4,16 @@ cd bulutbilisimciler-kafka-demo/
 
 docker-compose up -d
 
-docker ps
+docker exec -it kafka-container bash
 
-docker exec -it kafka bash
-
-kafka-topics --create --topic topic-1 --bootstrap-server localhost:9092
+kafka-topics --create --topic topic-1 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 kafka-topics --bootstrap-server localhost:9092 --list
 
-bash producer.sh
-# kafka-console-producer --topic topic-1 --bootstrap-server localhost:9092
+chmod +x producer.sh  
+
+./producer.sh
 
 kafka-console-consumer --topic topic-1 --offset=latest --bootstrap-server localhost:9092
 
-docker inspect kafka > container IP > kafka UI
+:8080 > UI
