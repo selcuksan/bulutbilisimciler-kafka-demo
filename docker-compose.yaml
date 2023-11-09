@@ -35,7 +35,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     volumes:
-      - /root/workspace/bulutbilisimciler-kafka-demo/producer.sh:/home/appuser/producer.sh
+      - ./producer.sh:/home/appuser/producer.sh
     networks:
       - kafka-net
 networks:
