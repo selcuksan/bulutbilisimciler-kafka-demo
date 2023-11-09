@@ -13,7 +13,7 @@ KAFKA_BROKER="localhost:9092"
 # Kafka konu başlığı adını değiştirin
 TOPIC_NAME="topic-1"
 # Kullanıcı adını Kafka konusuna gönderin
-for i in {1..100}; do
+for i in {1..10000}; do
   # Kullanıcı adı oluşturmak için fonksiyonu çağırın
   USERNAME=$(generate_username)
   echo "$USERNAME" | kafka-console-producer --topic $TOPIC_NAME --bootstrap-server $KAFKA_BROKER
