@@ -3,7 +3,7 @@
 function generate_username() {
   # Alfanumerik karakterlerden oluşan bir dizi oluşturun
   CHARS="abcdefghijklmnopqrstuvwxyz0123456789"
-  USERNAME=""
+  USERNAME="user"
   USERNAME=$(echo "${CHARS:$(( RANDOM % ${#CHARS} )):10}")
   echo $USERNAME
 }
