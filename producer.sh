@@ -16,5 +16,5 @@ TOPIC_NAME="topic-1"
 for i in {1..10000}; do
   # Kullanıcı adı oluşturmak için fonksiyonu çağırın
   USERNAME=$(generate_username)
-  echo "$USERNAME" | kafka-console-producer --topic $TOPIC_NAME --bootstrap-server $KAFKA_BROKER
+  echo "$i - $USERNAME" | kafka-console-producer --topic $TOPIC_NAME --bootstrap-server $KAFKA_BROKER
 done
